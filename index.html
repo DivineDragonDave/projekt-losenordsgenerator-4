@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Lösenords Generator</title>
+  </head>
+
+  <body>
+    <h1 class="top">Password Generator</h1>
+
+    <div class="password" id="passwordDisplay">
+      <h2 id="generatedPassword"></h2>
+      <button id="copy" role="button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35.373"
+          height="43.56"
+          viewBox="0 0 35.373 43.56"
+        >
+          <g id="copy" transform="translate(-1428.197 -707.762)">
+            <path
+              id="Path_267"
+              data-name="Path 267"
+              d="M17657.32,370.466h18.391v6.666h-25.152V343.97h6.762v26.5Z"
+              transform="translate(-16220.861 372.69)"
+              fill="none"
+              stroke="#a638f6"
+              stroke-linejoin="round"
+              stroke-width="3"
+            />
+            <path
+              id="Path_268"
+              data-name="Path 268"
+              d="M17702.658,341.5h7.041l-.031-21.33h-12V307.46h-13.541v7.229"
+              transform="translate(-16247.628 401.802)"
+              fill="none"
+              stroke="#a638f6"
+              stroke-linejoin="round"
+              stroke-width="3"
+            />
+            <path
+              id="Path_270"
+              data-name="Path 270"
+              d="M18009.23,292.46l11.969,12.76"
+              transform="translate(-16559.133 416.802)"
+              fill="none"
+              stroke="#a638f6"
+              stroke-linejoin="round"
+              stroke-width="3"
+            />
+          </g>
+        </svg>
+      </button>
+    </div>
+
+    <main class="container">
+      <div class="char-length">
+        <div class="text-number">
+          <label id="char">Character Length</label>
+          <span id="length-output"></span>
+        </div>
+        <input
+          id="password-length"
+          type="range"
+          min="3"
+          max="18"
+          value="10"
+          role="slider"
+        />
+      </div>
+
+      <div class="options">
+        <div id="uppercase" class="include">
+          <div>Include Uppercase Letters</div>
+          <label class="switch">
+            <span class="box"></span>
+            <input type="checkbox" checked class="checkbox" />
+          </label>
+        </div>
+        <div id="lowercase" class="include">
+          <div>Include Lowercase Letters</div>
+          <label class="switch">
+            <span class="box"></span>
+            <input type="checkbox" checked class="checkbox" />
+          </label>
+        </div>
+        <div id="numbers" class="include">
+          <div>Include Numbers</div>
+          <label class="switch">
+            <span class="box"></span>
+            <input type="checkbox" checked class="checkbox" />
+          </label>
+        </div>
+        <div id="symbols" class="include">
+          <div>Include Symbols</div>
+          <label class="switch">
+            <span class="box"></span>
+            <input type="checkbox" checked class="checkbox" />
+          </label>
+        </div>
+      </div>
+
+      <div class="strength">
+        <span id="str">Strength</span>
+        <div class="meter">
+          <span id="strength-value"></span>
+          <div class="strength-bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="message">
+        <p id="message"></p>
+      </div>
+
+      <button id="generate" role="button">Generate</button>
+    </main>
+
+    <footer>
+      <img src="/images/techover-logo.png" alt="Techover Logo" class="logo" />
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
